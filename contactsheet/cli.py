@@ -3,14 +3,18 @@
 """Console script for contactsheet."""
 import sys
 import click
-
+from contactsheet import create_tiled_image
 
 @click.command()
-def main(args=None):
-    """Console script for contactsheet."""
-    click.echo("Replace this message by putting your code into "
-               "contactsheet.cli.main")
-    click.echo("See click documentation at http://click.pocoo.org/")
+@click.option('--out-file', help='Path to file where the contactsheet should be saved', default='contactsheet.jpg')
+def main(out_file):
+    """Console script for contactsheet.
+
+    Reads a list of paths to image files from STDIN, and
+    compiles them into a contact sheet image
+    """
+    img = create_tiled_image([line.rstrip() for line in list(click.get_text_stream('stdin'))])
+    img.convert('RGB').save(out_file)
     return 0
 
 
