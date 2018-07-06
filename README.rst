@@ -14,12 +14,6 @@ contactsheet
         :alt: Documentation Status
 
 
-.. image:: https://pyup.io/repos/github/paul-butcher/contactsheet/shield.svg
-     :target: https://pyup.io/repos/github/paul-butcher/contactsheet/
-     :alt: Updates
-
-
-
 Contactsheet compiles a set of images into a single contact sheet image.
 
 
@@ -30,7 +24,8 @@ Contactsheet compiles a set of images into a single contact sheet image.
 Features
 --------
 
-* TODO
+Produces a contact sheet of images.  The output contact sheet image is the same size as the first original
+image provided.
 
 Credits
 -------
