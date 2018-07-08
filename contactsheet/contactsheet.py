@@ -66,7 +66,7 @@ def get_tiled_image_dimensions(grid_size, image_size):
 
     :param grid_size: A 2-tuple (width, height) defining the shape of the grid (in number of images)
     :param image_size: A 2-tuple (width, height) defining the shape of the final image (in pixels)
-    :return:
+    :return: two 2-tuples, the size of each tile and the size of the final output image/
     """
     tile_width = image_size[0] / grid_size[0]
     # preserve aspect ratio by dividing consistently. grid cols is always >= rows

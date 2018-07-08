@@ -23,7 +23,7 @@ def test_command_line_interface():
 
 @pytest.mark.parametrize(
     "cell_count",
-    xrange(1, 145)
+    range(1, 145)
 )
 def test_get_grid_size(cell_count):
     """

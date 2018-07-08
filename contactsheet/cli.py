@@ -3,7 +3,7 @@
 """Console script for contactsheet."""
 import sys
 import click
-from contactsheet import create_tiled_image
+from .contactsheet import create_tiled_image
 
 @click.command()
 @click.option('--out-file', help='Path to file where the contactsheet should be saved', default='contactsheet.jpg')
