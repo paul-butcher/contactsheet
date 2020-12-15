@@ -74,7 +74,9 @@ Background
 
 This tool was born out of some video analysis work I was doing. I needed
 to be able to show a single image with key frames that I had extracted
-from a video.
+from a video.  The image needed to have consistent dimensions, and
+preferably a consistent size, regardless of the number of key frames
+in the video.
 
 Credits
 -------
