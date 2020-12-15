@@ -60,6 +60,15 @@ to square as possible.
 
 .. image:: sampledata/out7.jpg
 
+.. code-block:: shell
+
+    $ ls -1 sampledata/p10101*8.jpg
+    sampledata/p1010168.jpg
+    sampledata/p1010178.jpg
+    $ ls -1 sampledata/p10101*8.jpg | contactsheet
+
+.. image:: sampledata/out2.jpg
+
 Credits
 -------
 
