@@ -24,9 +24,9 @@ Contactsheet compiles a set of images into a single contact sheet image.
 Features
 --------
 
-Produces a contact sheet of images.
+Produces a contact sheet of images from a list of same-sized images.
 
-The output contact sheet image is roughly the same size as the first original image provided.
+The output contact sheet image is roughly the same size as the individual images.
 
 A contactsheet image made of a square number will be a square grid.
 e.g.  4 images is a 2x2 grid of thumbnails.
@@ -68,6 +68,13 @@ to square as possible.
     $ ls -1 sampledata/p10101*8.jpg | contactsheet
 
 .. image:: sampledata/out2.jpg
+
+Background
+----------
+
+This tool was born out of some video analysis work I was doing. I needed
+to be able to show a single image with key frames that I had extracted
+from a video.
 
 Credits
 -------
