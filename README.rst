@@ -41,7 +41,7 @@ e.g.  4 images is a 2x2 grid of thumbnails.
 
     $ ls -1 sampledata/p101016* | contactsheet --out-file sampledata/out4.jpg
 
-.. image:: https://raw.githubusercontent.com/paul-butcher/contactsheet/sampledata/out4.jpg
+.. image:: https://raw.githubusercontent.com/paul-butcher/contactsheet/master/sampledata/out4.jpg
 
 A contactsheet image made of a non-square number will be as close
 to square as possible.
@@ -58,7 +58,7 @@ to square as possible.
     sampledata/p1010178.jpg
     $ ls -1 sampledata/p10101* | contactsheet --out-file sampledata/out7.jpg
 
-.. image:: https://raw.githubusercontent.com/paul-butcher/contactsheet/sampledata/out7.jpg
+.. image:: https://raw.githubusercontent.com/paul-butcher/contactsheet/master/sampledata/out7.jpg
 
 .. code-block:: shell
 
@@ -67,7 +67,7 @@ to square as possible.
     sampledata/p1010178.jpg
     $ ls -1 sampledata/p10101*8.jpg | contactsheet --out-file sampledata/out2.jpg
 
-.. image:: https://raw.githubusercontent.com/paul-butcher/contactsheet/sampledata/out2.jpg
+.. image:: https://raw.githubusercontent.com/paul-butcher/contactsheet/master/sampledata/out2.jpg
 
 Background
 ----------
