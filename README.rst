@@ -28,9 +28,11 @@ Produces a contact sheet of images.
 
 The output contact sheet image is roughly the same size as the first original image provided.
 
-A contactsheet image made of 4 images is a 2x2 grid of thumbnails.
+A contactsheet image made of a square number will be a square grid.
+e.g.  4 images is a 2x2 grid of thumbnails.
 
 .. code-block:: shell
+
     $ ls -1 sampledata/p101016*
     sampledata/p1010161.jpg
     sampledata/p1010167.jpg
@@ -41,6 +43,22 @@ A contactsheet image made of 4 images is a 2x2 grid of thumbnails.
 
 .. image:: sampledata/out4.jpg
 
+A contactsheet image made of a non-square number will be as close
+to square as possible.
+
+.. code-block:: shell
+
+    $ ls -1 sampledata/p10101*
+    sampledata/p1010161.jpg
+    sampledata/p1010167.jpg
+    sampledata/p1010168.jpg
+    sampledata/p1010169.jpg
+    sampledata/p1010170.jpg
+    sampledata/p1010173.jpg
+    sampledata/p1010178.jpg
+    $ ls -1 sampledata/p10101* | contactsheet
+
+.. image:: sampledata/out7.jpg
 
 Credits
 -------
