@@ -28,6 +28,17 @@ Produces a contact sheet of images.
 
 The output contact sheet image is roughly the same size as the first original image provided.
 
+A contactsheet image made of 4 images is a 2x2 grid of thumbnails.
+
+.. code-block:: shell
+    $ ls -1 sampledata/p101016*
+    sampledata/p1010161.jpg
+    sampledata/p1010167.jpg
+    sampledata/p1010168.jpg
+    sampledata/p1010169.jpg
+
+    $ ls -1 sampledata/p101016* | contactsheet
+
 .. image:: sampledata/out4.jpg
 
 
