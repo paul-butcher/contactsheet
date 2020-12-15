@@ -24,8 +24,12 @@ Contactsheet compiles a set of images into a single contact sheet image.
 Features
 --------
 
-Produces a contact sheet of images.  The output contact sheet image is the same size as the first original
-image provided.
+Produces a contact sheet of images.
+
+The output contact sheet image is roughly the same size as the first original image provided.
+
+.. image:: sampledata/out4.jpg
+
 
 Credits
 -------

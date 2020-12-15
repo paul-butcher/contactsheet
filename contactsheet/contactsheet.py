@@ -8,6 +8,9 @@ from PIL import Image, ImageOps
 
 
 def create_tiled_image(image_paths):
+    """
+    Create a tiled image from the list of image paths.
+    """
     image_count = len(image_paths)
     if image_count == 0:
         return Image.new("RGBA", (1, 1), "black")
@@ -22,6 +25,11 @@ def create_tiled_image(image_paths):
 
 
 def insert_image_into_grid(final_image, tile_size, image_path, location):
+    """
+    Given a PIL image object - `final_image`, insert the image found at `image_path`
+    into the appropriate `location` and return it.
+    location is defined as the 2d location in a grid of images (see get_location_in_grid)
+    """
     input_image = Image.open(image_path)
     input_image.thumbnail(tile_size)
     final_image.paste(input_image, (tile_size[0] * location[0], tile_size[1] * location[1]))
@@ -59,7 +67,7 @@ def get_tiled_image_dimensions(grid_size, image_size):
     """
 
     An image consisting of tiles of itself (or same-sized) images
-    will be as close to the same dimensions as the original.
+    will be close to the same dimensions as the original.
 
     This returns two tuples - the size of the final output image, and the size of the
     tiles that it will consist of.
@@ -68,9 +76,9 @@ def get_tiled_image_dimensions(grid_size, image_size):
     :param image_size: A 2-tuple (width, height) defining the shape of the final image (in pixels)
     :return: two 2-tuples, the size of each tile and the size of the final output image/
     """
-    tile_width = image_size[0] / grid_size[0]
+    tile_width = int(image_size[0] / grid_size[0])
     # preserve aspect ratio by dividing consistently. grid cols is always >= rows
-    tile_height = image_size[1] / grid_size[0]
+    tile_height = int(image_size[1] / grid_size[0])
 
     # find the final height by multiplying up the tile size by the number of rows.
     final_height = tile_height * grid_size[1]
@@ -83,7 +91,7 @@ def get_grid_size(cell_count):
     Determines the best grid shape for a given cell count.
 
     The best grid shape is the one closest to square that minimises the number of blank cells
-    e.g. for a square number, it is the corresponding square.
+    e.g. for a square number, it is the corresponding square root.
     >>> get_grid_size(25)
     (5, 5)
 
