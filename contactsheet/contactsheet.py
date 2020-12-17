@@ -13,10 +13,10 @@ def create_tiled_image(image_paths):
     """
     image_count = len(image_paths)
     if image_count == 0:
-        return Image.new("RGBA", (1, 1), "black")
+        return Image.new("RGB", (1, 1), "black")
     grid_size = get_grid_size(image_count)
     tile_size, output_size = get_tiled_image_dimensions(grid_size, Image.open(image_paths[0]).size)
-    final_image = Image.new("RGBA", output_size, "black")
+    final_image = Image.new("RGB", output_size, "black")
 
     for i, image_path in enumerate(image_paths):
         insert_image_into_grid(final_image, tile_size, image_path, get_location_in_grid(grid_size, i))
